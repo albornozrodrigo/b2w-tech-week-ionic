@@ -18,6 +18,10 @@ export class ListPage implements OnInit {
     this.list = localStorage.getItem('list') ? JSON.parse(localStorage.getItem('list')) : [];
   }
 
+  updateList() {
+    localStorage.setItem('list', this.list);
+  }
+
   remove(index: number) {
     this.list.splice(index, 1);
     localStorage.setItem('list', JSON.stringify(this.list));

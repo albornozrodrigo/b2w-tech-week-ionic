@@ -9,7 +9,7 @@
     <ion-item-sliding *ngFor="let item of list; let i = index">  
       <ion-item>
         <ion-label>{{item.name}}</ion-label>
-        <ion-checkbox slot="end" [(ngModel)]="item.checked"></ion-checkbox>
+        <ion-checkbox slot="end" [(ngModel)]="item.checked" (change)="updateList()"></ion-checkbox>
       </ion-item>
   
       <ion-item-options side="end">
