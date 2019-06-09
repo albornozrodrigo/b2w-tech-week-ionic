@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title *ngIf="!index">Inserir</ion-title>
+    <ion-title *ngIf="index">Editar</ion-title>
+    <ion-buttons slot="start" color="secondary">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input [(ngModel)]="todo.name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Descrição</ion-label>
+    <ion-textarea [(ngModel)]="todo.description"></ion-textarea>
+  </ion-item>
+
+  <br/>
+  <ion-button expand="full" color="secondary" (click)="save()">Salvar</ion-button>
+
+</ion-content>
